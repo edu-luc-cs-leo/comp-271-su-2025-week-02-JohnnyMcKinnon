@@ -190,7 +190,15 @@ public class MinHeap {
     /**
      * THIS IS YOUR ASSIGNMENT
      */
-    private void heapifyUp() {
+    //Johnny McKinnon 06/09/2025 11:30PM
+    private void heapifyUp(){
+        int child = this.usage()-1;
+        int parent = parent(child);
+            while(child>0 && this.underlying[child] < this.underlying[parent]){
+                swap(child, parent);
+                child = parent;
+                parent=parent(child);
+            } //end of while loop
     } // method heapifyUp
 
     /**
